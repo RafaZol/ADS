@@ -29,15 +29,25 @@ public class Calculadora {
             opc = menu();
 
             switch (opc) {
-                case 1 -> resultado = NumberUtils.somar(resultado, valor);
-                case 2 -> resultado = NumberUtils.subtrair(resultado, valor);
-                case 3 -> resultado = NumberUtils.multiplicar(resultado, valor);
-                case 4 -> resultado = NumberUtils.dividir(resultado, valor);
-                case 5 -> {
+                case 1:
+                    resultado = NumberUtils.somar(resultado, valor);
+                    break;
+                case 2:
+                    resultado = NumberUtils.subtrair(resultado, valor);
+                    break;
+                case 3:
+                    resultado = NumberUtils.multiplicar(resultado, valor);
+                    break;
+                case 4:
+                    resultado = NumberUtils.dividir(resultado, valor);
+                    break;
+                case 5:
                     resultado = 0;
                     valor = 0;
-                }
-                default -> System.out.println("Opcão inválida");
+                    break;
+                default:
+                    System.out.println("Opcão inválida");
+                    break;
             }
             System.out.printf("Rsultado : %.2f\n", resultado);
             System.out.println("Continuar ? [S/N]\n");

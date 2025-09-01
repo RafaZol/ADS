@@ -16,7 +16,7 @@ public class Evento {
     private Date data;
     private double valor;
     private int qtdMax;
-    private List<Ingresso> totalVendidos;
+    private List<Ingresso> totalVendidos = new ArrayList<>();
     private static List<Evento> todosEventos;
 
     public Evento(String nome, String data, double valor, int qtdMax) {
@@ -70,6 +70,15 @@ public class Evento {
     }
 
     public static boolean excluir() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o numero correspondente do Evento que deseja excluir");
+        int opc = entrada.nextInt();
+        for(int i =0; i < todosEventos.size(); i++){
+            if(i == todosEventos.size() - 1){
+                todosEventos.remove(i);
+                return true;
+            }
+        }
         return false;
     }
 
@@ -84,13 +93,30 @@ public class Evento {
         }
     }
 
+    public static void ingressosPorEvento() {
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Digite o numero correspondente do Evento");
+        int opc = entrada.nextInt();
+        for(int i =0; i < todosEventos.size(); i++){
+            if(i == todosEventos.size() - 1){
+                List<Ingresso> ingressos = Ingresso.getIngressosVendidosPorEvento(todosEventos.get(i));
+                if(ingressos != null){
+                    for(Ingresso ing : ingressos){
+                        System.out.println(ing.toString());
+                    }
+                }
+                break;
+            }
+        }
+    }
+
     @Override
     public String toString() {
         return "Evento: " + nome + " \n"
                 + " Save The Date : " + data + "\n"
-                + " Ingressos disponiveis : " + (qtdMax - totalVendidos.size());
+                + " Ingressos disponiveis : " + (totalVendidos.isEmpty() ? "0 " : qtdMax - totalVendidos.size());
     }
-    
+
     public double getValor(){
         return this.valor;
     }
