@@ -10,12 +10,13 @@ import java.util.Scanner;
  */
 public class Ingresso {
 
+    public static final Scanner entrada = new Scanner(System.in);
     private String nome;
     private String cpf;
     private double valor;
     private Evento evento;
-    private static final int VIP = 30;
-    private static final int CAMAROTE = 60;
+    private static final double VIP = 0.30;
+    private static final double CAMAROTE = 0.60;
     private static List<Ingresso> ingressosVendidos = new ArrayList<>();
 
     public Ingresso(double valor, int tipo, String nome, String cpf, Evento evento) {
@@ -32,10 +33,10 @@ public class Ingresso {
                 valor = valor;
                 break;
             case 2:
-                valor += valor * (VIP / 100);
+                valor += valor * VIP;
                 break;
             case 3:
-                valor += valor * (CAMAROTE / 100);
+                valor += valor * CAMAROTE;
                 break;
             default:
                 System.out.println("Opção invalida para tipo de ingresso");
@@ -45,7 +46,6 @@ public class Ingresso {
     }
 
     public static boolean cadastrarIngressoEvento(Evento evento) {
-        Scanner entrada = new Scanner(System.in);
         System.out.println("1 - Pista");
         System.out.println("2 - VIP");
         System.out.println("3 - CAMAROTE");
@@ -54,7 +54,7 @@ public class Ingresso {
         System.out.println("Informe o nome do Cliente : ");
         String nome = entrada.next();
         System.out.println("Informe o cpf sem . e - : ");
-        String cpf = entrada.next();
+        String cpf = entrada.nextLine();
         Ingresso ingresso = new Ingresso(valorIngresso, opc, nome, cpf, evento);
         if(ingressosVendidos.add(ingresso)){
             return true;

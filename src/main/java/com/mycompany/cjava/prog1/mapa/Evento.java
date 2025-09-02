@@ -12,6 +12,8 @@ import java.util.Scanner;
  */
 public class Evento {
 
+    public static final Scanner entrada = new Scanner(System.in);
+
     private String nome;
     private Date data;
     private double valor;
@@ -29,14 +31,14 @@ public class Evento {
     private Date dataConvertida(String dataS) {
         try {
             SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-            return data = format.parse(dataS);
+            data = format.parse(dataS);
+            return data;
         } catch (Exception e) {
             return new Date();
         }
     }
 
     public static boolean cadastrarEvento() {
-        Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o nome do evento :");
         String nome = entrada.next();
         System.out.println("Digite a data do evento no formato 10/04/2000");
@@ -47,6 +49,7 @@ public class Evento {
         int qtd = entrada.nextInt();
         System.out.println("Continuar ? s, Desistir ? n");
         String cont = entrada.next();
+        entrada.nextLine();
         if (cont.equals("s") || cont.equals("S")) {
             todosEventos = new ArrayList<>();
 
@@ -58,9 +61,9 @@ public class Evento {
     }
 
     public static void venderIngresso() {
-        Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o numero correspondente do Evento");
         int opc = entrada.nextInt();
+        entrada.nextLine();
         for(int i =0; i < todosEventos.size(); i++){
             if(i == todosEventos.size() - 1){
                 Ingresso.cadastrarIngressoEvento(todosEventos.get(i));
@@ -70,9 +73,14 @@ public class Evento {
     }
 
     public static boolean excluir() {
-        Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o numero correspondente do Evento que deseja excluir");
         int opc = entrada.nextInt();
+        System.out.println("Tem certeza que deseja excluir o evento ? s/n");
+        String conf = entrada.next();
+        entrada.nextLine();
+        if(conf.equals("n") || conf.equals("N")){
+            return false;
+        }
         for(int i =0; i < todosEventos.size(); i++){
             if(i == todosEventos.size() - 1){
                 todosEventos.remove(i);
@@ -94,9 +102,9 @@ public class Evento {
     }
 
     public static void ingressosPorEvento() {
-        Scanner entrada = new Scanner(System.in);
         System.out.println("Digite o numero correspondente do Evento");
         int opc = entrada.nextInt();
+        entrada.nextLine();
         for(int i =0; i < todosEventos.size(); i++){
             if(i == todosEventos.size() - 1){
                 List<Ingresso> ingressos = Ingresso.getIngressosVendidosPorEvento(todosEventos.get(i));
@@ -112,9 +120,10 @@ public class Evento {
 
     @Override
     public String toString() {
+        String ingressosDisponiveis = qtdMax - (totalVendidos== null ? 0 : totalVendidos.size()) + "";
         return "Evento: " + nome + " \n"
-                + " Save The Date : " + data + "\n"
-                + " Ingressos disponiveis : " + (totalVendidos.isEmpty() ? "0 " : qtdMax - totalVendidos.size());
+                + " Save The Date : " + data.toString() + "\n"
+                + " Ingressos disponiveis : " + ingressosDisponiveis;
     }
 
     public double getValor(){
