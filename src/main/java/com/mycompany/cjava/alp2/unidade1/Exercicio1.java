@@ -3,6 +3,9 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que leia o nome de uma pessoa e imprima
+ * a seguinte mensagem
+ * "Bem vindo  disciplina de Algoritmos e Lógica de Programação II <nome>".
  *
  * @author Rafael
  */

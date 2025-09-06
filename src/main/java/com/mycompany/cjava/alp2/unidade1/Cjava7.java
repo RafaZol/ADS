@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que receba dois números, calcule e apresente
+ * o resultado do primeiro elevado ao segundo.
  *
  * @author Rafael
  */
@@ -14,7 +16,7 @@ public class Cjava7 {
         
         System.out.println("Digite o primeiro numero : ");
         n1 = entrada.nextFloat();
-        System.out.println("Digite o segundo numeto : ");
+        System.out.println("Digite o segundo numero : ");
         n2 = entrada.nextFloat();
         
         total = (float) Math.pow(n1, n2); //cast obrigando o metodo de exponenciação retornar um float

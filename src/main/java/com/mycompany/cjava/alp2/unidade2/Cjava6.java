@@ -2,6 +2,16 @@ package com.mycompany.cjava.alp2.unidade2;
 
 import java.util.Scanner;
 
+/**
+ * Construa um programa que receba a idade de uma pessoa
+ * e identifique sua classe eleitoral
+ * idade menor que 16 não vota
+ * idade maior que 16, menor que 18 e maior que 65, facultativo
+ * idade igual ou maior a 18 e menor que 65, obrigatório.
+ *
+ * @author Rafael
+ */
+
 public class Cjava6 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);

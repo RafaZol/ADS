@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade2;
 import java.util.Scanner;
 
 /**
+ * Faça um programa que leia um número e informe
+ * se ele é divisivel por 5.
  *
  * @author Rafael
  */

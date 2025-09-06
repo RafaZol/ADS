@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Faça um programa que receba um valor de depósito eo valor da taxa de juros,
+ * calcule e apresente o valor do rendimento e o valor total.
  *
  * @author Rafael
  */

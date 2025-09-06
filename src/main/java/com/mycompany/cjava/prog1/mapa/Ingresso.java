@@ -46,7 +46,6 @@ public class Ingresso {
 
     public static boolean cadastrarIngressoEvento(Evento evento) {
         Scanner entrada = new Scanner(System.in);
-        entrada.nextLine();
         System.out.println("1 - Pista");
         System.out.println("2 - VIP");
         System.out.println("3 - CAMAROTE");
@@ -57,7 +56,6 @@ public class Ingresso {
         System.out.println("Informe o cpf sem . e - : ");
         String cpf = entrada.next();
         Ingresso ingresso = new Ingresso(valorIngresso, opc, nome, cpf, evento);
-        entrada.close();
         if(ingressosVendidos.add(ingresso)){
             System.out.println("Venda realizada com sucesso.");
             return true;

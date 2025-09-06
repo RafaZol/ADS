@@ -3,6 +3,7 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que calcule a área de um trapézio.
  *
  * @author Rafael
  */

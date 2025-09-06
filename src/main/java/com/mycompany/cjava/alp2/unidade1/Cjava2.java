@@ -1,6 +1,8 @@
 package com.mycompany.cjava.alp2.unidade1;
 
 /**
+ * Programa que apresenta alguns exemplos de uso da função
+ * printf. para facilitar o entendimento.
  *
  * @author Rafael
  */

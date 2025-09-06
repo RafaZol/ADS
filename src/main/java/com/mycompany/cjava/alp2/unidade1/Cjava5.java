@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Elabore um programa que receba quatro notas e calcule
+ * a média aritmética entre elas.
  *
  * @author Rafael
  */

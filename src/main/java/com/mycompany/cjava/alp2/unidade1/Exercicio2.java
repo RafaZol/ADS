@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que leia um número positivo e apresente
+ * o quadrado e a raiz quadrada desse número.
  *
  * @author Rafael
  */

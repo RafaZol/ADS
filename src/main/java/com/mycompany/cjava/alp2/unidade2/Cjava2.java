@@ -3,6 +3,9 @@ package com.mycompany.cjava.alp2.unidade2;
 import java.util.Scanner;
 
 /**
+ * Esccreva um programa que receba um número inteiro e se,
+ * este numero for par imprima sua raiz quadrada, senão,
+ * imprima o número ao quadrado.
  *
  * @author Rafael
  */

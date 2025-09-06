@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que receba quatro números inteiros,
+ * calcule e apresente a média aritmética entre eles,
+ * formatando  o valor da média na hora de apresentá-la com 2 casas decimais.
  *
  * @author Rafael
  */

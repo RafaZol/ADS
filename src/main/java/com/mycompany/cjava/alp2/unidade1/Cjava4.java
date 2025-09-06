@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que leia um numero inteiro e apresente
+ * seu antecessor e seu sucessor.
  *
  * @author Rafael
  */

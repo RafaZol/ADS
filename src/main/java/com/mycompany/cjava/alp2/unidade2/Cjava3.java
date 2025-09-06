@@ -3,6 +3,10 @@ package com.mycompany.cjava.alp2.unidade2;
 import java.util.Scanner;
 
 /**
+ * Ecreva um programa que permita o usuário escolher
+ * qual operação deseja realizar com dois números,
+ * (soma, subtração, multiplicação ou divisão)
+ * e retorne o resultado da operação.
  *
  * @author Rafael
  */

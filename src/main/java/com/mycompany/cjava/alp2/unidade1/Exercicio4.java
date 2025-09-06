@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade1;
 import java.util.Scanner;
 
 /**
+ * Escreva um programa que, dado o raio de um circulo, calcule
+ * sua área e o perímetro.
  *
  * @author Rafael
  */

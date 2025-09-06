@@ -3,6 +3,13 @@ package com.mycompany.cjava.alp2.unidade2;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
+/**
+ * Elabore um programa que receba o nome e a idade de uma pessoa
+ * e informe o nome, a idade, e o valor da mensalidade do plano de saúde.
+ *
+ * @author Rafael
+ */
+
 public class Cjava5 {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);

@@ -3,6 +3,8 @@ package com.mycompany.cjava.alp2.unidade2;
 import java.util.Scanner;
 
 /**
+ *  Escreva um programa que receba um número inteito,
+ *  e se, este número for par, imprimir sua raiz quadrada.
  *
  * @author Rafael
  */
