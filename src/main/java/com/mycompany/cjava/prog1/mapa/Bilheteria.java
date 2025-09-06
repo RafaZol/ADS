@@ -23,6 +23,7 @@ public class Bilheteria {
             System.out.println(" 4 - Listar Ingressos por Evento");
             System.out.println(" 5 - Excluir Evento");
             System.out.println(" 6 - Sair");
+            System.out.print(" -> ");
             opc = entrada.nextInt();
             switch (opc) {
                 case 1 :
@@ -36,8 +37,12 @@ public class Bilheteria {
                     break;
                 case 4 :
                     Evento.ingressosPorEvento();
+                    break;
                 case 5 :
                     Evento.excluir();
+                    break;
+                case 6 :
+                    break;
                 default:
                     System.out.println("Opção inavalida");
             }
